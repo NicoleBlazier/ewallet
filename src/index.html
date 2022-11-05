@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>A JavaScript project</title>
+  <link rel="stylesheet" href="style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- google font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+  <!-- font awesome -->
+  <script src="https://kit.fontawesome.com/df0405a8db.js" crossorigin="anonymous"></script>
+
+</head>
+<body>
+  <header class='header'>
+    <div class='header-wallet'>
+      <div>
+        <p>MY WALLET</p>
+        <p id='wallet-fullName'></p>
+        <p id='wallet-did'></p>
+      </div>
+      <div class='send-receive-btns'>
+        <div>
+          <p><i class="fa-solid fa-paper-plane icon-plane"></i></p>
+          <button class='btn' id='send-btn'>SEND</button>
+        </div>
+        <div>
+          <p><i class="fa-solid fa-paper-plane icon-plane"></i></p>
+          <button class='btn' id='receive-btn'>RECEIVE</button>
+        </div>
+      </div>
+    </div>
+    <div class='nav-bar'>
+      <button id='wallet-btn' class='nav-btn'>Wallet</button>
+      <button id='dids-btn' class='nav-btn'>DID</button>
+    </div>
+  </header>
+
+
+  <main>
+        <!-- Wallet Documents stored -->
+    <div id='wallet' class='wallet'>
+      <div class='wallet-item-document'>
+      </div>
+    </div>
+
+    <!-- Wallet DID stored -->
+    <div id='dids' class='dids'>
+      <div class='wallet-item-did'>
+      </div>
+    </div>
+
+    <!-- SEND -->
+    <div id='send' class='send'>
+      <div class='input-send'>
+        <div class='input-title'>
+          <div>TO:</div>
+        </div>
+        <div>
+          <select class='input-value' id='select-did'>
+          </select>
+        </div>
+      </div>
+      <div class='input-send'>
+        <div class='input-title'>
+          <div>DOCUMENT:</div>
+        </div>
+        <div>
+          <select class='input-value' id='select-document'>
+          </select>
+        </div>
+      </div>
+      <div>
+        <div><i class="fa-solid fa-file-pdf icon-pdf" id='pdf-send'></i></div>
+      </div>
+      <div>
+        <button class='btn-form' id='send-btn-did'>SEND</button>
+      </div>
+    </div>
+
+    <!-- RECEIVE -->
+    <div id='receive' class='receive'>
+      <div class='input-send'>
+        <div class='input-title'>
+          <div>FROM:</div>
+        </div>
+        <div>
+          <input class='receive-value' id='agency-did'></input>
+        </div>
+      </div>
+      <div class='input-send'>
+        <div class='input-title'>
+          <div>AGENCY:</div>
+        </div>
+        <div>
+          <input class='receive-value' id='agency-name'></input>
+        </div>
+      </div>
+      <div class='input-send'>
+        <div class='input-title'>
+          <div>DOCUMENT:</div>
+        </div>
+        <div>
+          <input class='receive-value' id='document-name'></input>
+        </div>
+      </div>
+      <div>
+        <div>
+          <div><i class="fa-solid fa-file-pdf icon-pdf" id='pdf-receive'></i></div>
+        </div>
+      </div>
+      <div>
+        <button class='btn-form' id='receive-btn-did'>RECEIVE</button>
+      </div>
+    </div>
+
+    <!-- DID UPDATES -->
+    <div id='account-details' class='account-details'>
+      <div class='icon-edit'>
+        <i class="fa-regular fa-pen-to-square icon" id='edit-icon'></i>
+      </div>
+      <div class='account-details-inputs'>
+        <input value='Nicole Blazier' id='input-wallet-name'></input>
+        <input value='DID:ETH::44444444444444' id='input-wallet-did'></input>
+        <input value='nicole.blazier@gmail.com' id='input-wallet-email'></input>
+      </div>
+      <div>
+        <button class='btn-form' id='save-btn'>SAVE</button>
+      </div>
+    </div>
+
+  </main>
+  <footer class='footer'>
+    <div>
+      <button class='footer-btn' id='ft-wallet-btn'>
+        <i class="fa-solid fa-wallet icon"></i>
+        <p>Wallet</p>
+      </button>
+    </div>
+    <div>
+      <button class='footer-btn' id='ft-setting-btn'>
+        <i class="fa-solid fa-gear icon"></i>
+        <p>Settings</div>
+      </button>
+    </div>
+  </footer>
+
+  <div id="app"></div>
+  <script src="main.js"></script>
+</body>
+</html>

@@ -1,1 +1,2 @@
 # ewallet
+A JavaScript project
